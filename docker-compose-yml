@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  covid19statistics-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        APP_NODE_ENV: development
+    ports:
+      - '3000:3000'
+    environment:
+      APP_ENV: development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file:
+      - .env.example
