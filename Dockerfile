@@ -1,5 +1,5 @@
 # Temel imaj olarak Node.js kullanılıyor
-FROM node:18-alpine AS base
+FROM node:18-alpine
 
 # Uygulama dizinini oluştur ve çalışma dizini olarak ayarla
 WORKDIR /app
